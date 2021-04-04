@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useContext } from "react";
+import Schedule from "./Components/Schedule";
+import Login from "./Components/Login";
+import { UserProvider, UserContext } from "./Utils/UserContext";
+import firebase from "./Utils/firebase";
+import {
+  Switch,
+  Route,
+  BrowserRouter as Router,
+  RouteComponentProps,
+  withRouter,
+} from "react-router-dom";
+import UpdateSchedule from "./Components/UpdateSchedule";
 
-function App() {
+const App = () => {
+  const [firebaseInitialized, setFirebaseInitialized] = useState(false);
+
+  useEffect(() => {
+    firebase.isInitialized().then((val) => {
+      setFirebaseInitialized(val);
+    });
+  }, []);
+  console.log("firebase", setFirebaseInitialized);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/schedule" component={Schedule} />
+          <Route exact path="/update" component={UpdateSchedule} />
+        </Switch>
+      </Router>
+    </UserProvider>
   );
-}
+};
 
 export default App;
