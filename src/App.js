@@ -3,17 +3,21 @@ import Schedule from "./Components/Schedule";
 import Login from "./Components/Login";
 import { UserProvider, UserContext } from "./Utils/UserContext";
 import firebase from "./Utils/firebase";
-import {
-  Switch,
-  Route,
-  BrowserRouter as Router,
-  RouteComponentProps,
-  withRouter,
-} from "react-router-dom";
 import UpdateSchedule from "./Components/UpdateSchedule";
+import {
+  FirebaseAuthProvider,
+  FirebaseDataProvider,
+} from "react-admin-firebase";
+import UserList from "./Components/UserList";
+import config from "./Utils/firebase";
+import { Admin, Resource, ListGuesser } from "react-admin";
+import Dashboard from "./Components/Dashboard";
+import EditSchedule from "./Components/EditSchedule";
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false);
+  const dataProvider = FirebaseDataProvider(config);
+  const authProvider = FirebaseAuthProvider(config);
 
   useEffect(() => {
     firebase.isInitialized().then((val) => {
@@ -23,15 +27,15 @@ const App = () => {
   console.log("firebase", setFirebaseInitialized);
 
   return (
-    <UserProvider>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/schedule" component={Schedule} />
-          <Route exact path="/update" component={UpdateSchedule} />
-        </Switch>
-      </Router>
-    </UserProvider>
+    <Admin
+      dataProvider={dataProvider}
+      authProvider={authProvider}
+      loginPage={Login}
+      dashboard={Dashboard}
+      edit={EditSchedule}
+    >
+      <Resource name="users" list={UserList} create={UpdateSchedule} />
+    </Admin>
   );
 };
 

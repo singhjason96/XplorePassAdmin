@@ -5,6 +5,7 @@ import {
   TextField,
   EmailField,
   ReferenceField,
+  EditButton,
 } from "react-admin";
 
 const UserList = (props) => {
@@ -18,6 +19,7 @@ const UserList = (props) => {
         <TextField source="host" />
         <TextField source="event" />
         <TextField source="hours" />
+        <EditButton basePath="/users" />
       </Datagrid>
     </List>
   );

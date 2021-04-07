@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     width: "25rem",
     height: "75vh",
-    backgroundColor: "red",
+    backgroundColor: "#f5f5f5",
     alignItems: "center",
     borderRadius: "5px",
     display: "flex",
@@ -57,7 +57,7 @@ const Login = () => {
   async function login() {
     try {
       await firebase.login(email, password);
-      return history.push("/schedule");
+      return history.push("/#/users");
     } catch (e) {
       alert(e);
       return null;
