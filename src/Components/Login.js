@@ -29,9 +29,11 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     width: "25rem",
     height: "75vh",
-    backgroundColor: "red",
+    backgroundColor: "white",
     alignItems: "center",
     borderRadius: "5px",
+    borderColor: "black", 
+    borderStyle: "solid",
     display: "flex",
     justifyContent: "center",
   },
@@ -85,7 +87,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <div className={classes.buttonStyle}>
-          <Button variant="contained" color="primary" onClick={login}>
+          <Button variant="contained" color="white" onClick={login}>
             Log In
           </Button>
           <Link>Forgot Password?</Link>
