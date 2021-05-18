@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import firebase from "../Utils/firebase";
 import { useHistory } from "react-router-dom";
+import Background from "./Background";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginBottom: "20%",
     marginTop: "0%",
+    color: "black",
   },
   formStyle: {
     marginRight: "auto",
@@ -32,10 +34,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     alignItems: "center",
     borderRadius: "5px",
-    borderColor: "black", 
+    borderColor: "black",
     borderStyle: "solid",
     display: "flex",
     justifyContent: "center",
+    marginTop: "0",
   },
   buttonStyle: {
     display: "flex",
@@ -67,33 +70,35 @@ const Login = () => {
   }
 
   return (
-    <div className={classes.formStyle}>
-      <form className={classes.root}>
-        <h2 className={classes.titleStyle}>XplorePass Admin</h2>
-        <TextField
-          required
-          id="standard-required"
-          label="Email Address"
-          variant="filled"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <TextField
-          required
-          id="standard-required"
-          label="Password"
-          variant="filled"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <div className={classes.buttonStyle}>
-          <Button variant="contained" color="white" onClick={login}>
-            Log In
-          </Button>
-          <Link>Forgot Password?</Link>
-        </div>
-      </form>
-    </div>
+    <Background>
+      <div className={classes.formStyle}>
+        <form className={classes.root}>
+          <h2 className={classes.titleStyle}>XplorePass Admin</h2>
+          <TextField
+            required
+            id='standard-required'
+            label='Email Address'
+            variant='filled'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            required
+            id='standard-required'
+            label='Password'
+            variant='filled'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <div className={classes.buttonStyle}>
+            <Button variant='contained' color='white' onClick={login}>
+              Log In
+            </Button>
+            <Link>Forgot Password?</Link>
+          </div>
+        </form>
+      </div>
+    </Background>
   );
 };
 
