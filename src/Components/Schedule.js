@@ -3,7 +3,6 @@ import { Admin, Resource, ListGuesser } from "react-admin";
 import config from "../Utils/firebase";
 import firebase from "firebase";
 import UserList from "./UserList";
-import Purchases from "./Purchases";
 import {
   FirebaseAuthProvider,
   FirebaseDataProvider,
@@ -47,7 +46,6 @@ const Schedule = () => {
     <>
       <Admin dataProvider={dataProvider} authProvider={authProvider}>
         <Resource name="users" list={UserList} />
-        <Resource name="purchases" list={Purchases} />
       </Admin>
     </>
   );

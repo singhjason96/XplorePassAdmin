@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import Schedule from "./Components/Schedule";
-import Purchases from "./Components/Purchases";
 import Login from "./Components/Login";
 import { UserProvider, UserContext } from "./Utils/UserContext";
 import firebase from "./Utils/firebase";
