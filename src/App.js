@@ -12,6 +12,7 @@ import {
   withRouter,
 } from "react-router-dom";
 import UpdateSchedule from "./Components/UpdateSchedule";
+import UpdatePurchases from "./Components/UpdatePurchases";
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false);
@@ -30,6 +31,8 @@ const App = () => {
           <Route exact path="/" component={Login} />
           <Route exact path="/schedule" component={Schedule} />
           <Route exact path="/update" component={UpdateSchedule} />
+          <Route exact path="/purchases" component={Purchases} />
+          <Route exact path="/updatepurchases" component={UpdatePurchases} />
         </Switch>
       </Router>
     </UserProvider>
