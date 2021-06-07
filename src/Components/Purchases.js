@@ -11,9 +11,9 @@ const Purchases = (props) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <TextField source="Name" />
-        <TextField source="Item Bought" />
-        <TextField source="Event Time" />
+        <TextField source="name" />
+        <TextField source="itemsBought" />
+        <TextField source="time" />
       </Datagrid>
     </List>
   );

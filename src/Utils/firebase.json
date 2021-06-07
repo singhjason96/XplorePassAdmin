@@ -1,0 +1,36 @@
+{
+  "apiKey": "AIzaSyDumzxkL8mE8-Y7u8Pedg9oNqbLDLVUCyg",
+  "authDomain": "xplorepassadmin.firebaseapp.com",
+  "databaseURL": "https://xplorepassadmin-default-rtdb.firebaseio.com",
+  "projectId": "xplorepassadmin",
+  "storageBucket": "xplorepassadmin.appspot.com",
+  "messagingSenderId": "357249137140",
+  "appId": "1:357249137140:web:7215379169a9bc92bea1a1",
+  "measurementId": "G-YVJVPTJB3T",
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "emulators": {
+    "auth": {
+      "port": null
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
+  }
+}

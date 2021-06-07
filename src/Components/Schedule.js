@@ -10,7 +10,6 @@ import {
 } from "react-admin-firebase";
 
 const Schedule = () => {
-  const [userData, setUserData] = useState({});
   const authProvider = FirebaseAuthProvider(config);
   useEffect(() => {
     let app =
@@ -26,13 +25,12 @@ const Schedule = () => {
     // });
 
     // var db = app.firestore();
-    // db.collection("users")
-    //   .doc("Event")
+    // db.collection("purchases")
+    //   .doc("Purchases")
     //   .set({
-    //     event: "Horseback Riding",
-    //     host: "Arnold",
-    //     hours: "2pm",
-    //     tourGuide: "Smith",
+    //     itemsBought: "Horseback Riding",
+    //     time: "2pm",
+    //     name: "John Johnson",
     //   })
     //   .then(() => {
     //     console.log("Document successfully written!");

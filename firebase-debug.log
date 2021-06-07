@@ -1,0 +1,180 @@
+[debug] [2021-06-07T17:39:51.500Z] ----------------------------------------------------------------------
+[debug] [2021-06-07T17:39:51.502Z] Command:       /Users/NashitaRahman/.nvm/versions/node/v14.5.0/bin/node /Users/NashitaRahman/.nvm/versions/node/v14.5.0/bin/firebase emulators:start
+[debug] [2021-06-07T17:39:51.502Z] CLI Version:   9.12.1
+[debug] [2021-06-07T17:39:51.503Z] Platform:      darwin
+[debug] [2021-06-07T17:39:51.503Z] Node Version:  v14.5.0
+[debug] [2021-06-07T17:39:51.504Z] Time:          Mon Jun 07 2021 12:39:51 GMT-0500 (Central Daylight Time)
+[debug] [2021-06-07T17:39:51.504Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-07T17:39:51.512Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-07T17:39:51.512Z] > authorizing via signed-in user (nashita@xplorepass.com)
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage"}}
+[debug] [2021-06-07T17:39:51.573Z] [hub] writing locator at /var/folders/nh/hb0ls5cn1l72s92hrmzts37c0000gn/T/hub-reactnativefirebase-4486a.json
+[info] ✔  functions: Using node@14 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@14 from host."}}
+[debug] [2021-06-07T17:39:51.652Z] defaultcredentials: writing to file /Users/NashitaRahman/.config/firebase/nashita_xplorepass_com_application_default_credentials.json
+[debug] [2021-06-07T17:39:51.654Z] Setting GAC to /Users/NashitaRahman/.config/firebase/nashita_xplorepass_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/NashitaRahman/.config/firebase/nashita_xplorepass_com_application_default_credentials.json"}}
+[debug] [2021-06-07T17:39:51.656Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/adminSdkConfig [none]
+[debug] [2021-06-07T17:39:51.903Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/adminSdkConfig 200
+[debug] [2021-06-07T17:39:51.903Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/adminSdkConfig {"projectId":"reactnativefirebase-4486a","databaseURL":"https://reactnativefirebase-4486a-default-rtdb.firebaseio.com","storageBucket":"reactnativefirebase-4486a.appspot.com","locationId":"us-central"}
+[info] i  firestore: downloading cloud-firestore-emulator-v1.12.0.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.12.0.jar..."}}
+[debug] [2021-06-07T17:39:52.237Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.12.0.jar 
+[debug] [2021-06-07T17:39:52.451Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.12.0.jar 200
+[debug] [2021-06-07T17:39:52.451Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.12.0.jar [stream]
+[debug] [2021-06-07T17:39:55.739Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-06-07T17:39:55.739Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-06-07T17:39:55.739Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/NashitaRahman/.cache/firebase/emulators/cloud-firestore-emulator-v1.12.0.jar","--host","localhost","--port",8080,"--rules","/Users/NashitaRahman/Desktop/XplorePassAdmin/firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/NashitaRahman/.cache/firebase/emulators/cloud-firestore-emulator-v1.12.0.jar\",\"--host\",\"localhost\",\"--port\",8080,\"--rules\",\"/Users/NashitaRahman/Desktop/XplorePassAdmin/firestore.rules\",\"--functions_emulator\",\"localhost:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2021-06-07T17:39:58.056Z] Jun 07, 2021 12:39:58 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://localhost:51422
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jun 07, 2021 12:39:58 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://localhost:51422\n"}}
+[debug] [2021-06-07T17:39:58.072Z] API endpoint: http://localhost:8080 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://localhost:8080"}}
+[debug] [2021-06-07T17:39:58.072Z] 
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=localhost:8080\n\nDev App Server is now running.\n\n"}}
+[debug] [2021-06-07T17:39:58.291Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a [none]
+[debug] [2021-06-07T17:39:58.511Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a 200
+[debug] [2021-06-07T17:39:58.511Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a {"projectId":"reactnativefirebase-4486a","projectNumber":"670091845133","displayName":"ReactNativeFirebase","name":"projects/reactnativefirebase-4486a","resources":{"hostingSite":"reactnativefirebase-4486a","realtimeDatabaseInstance":"reactnativefirebase-4486a-default-rtdb","storageBucket":"reactnativefirebase-4486a.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2021-06-07T17:39:58.512Z] database rules config:  [{"instance":"reactnativefirebase-4486a-default-rtdb","rules":"/Users/NashitaRahman/Desktop/XplorePassAdmin/database.rules.json"}]
+[info] i  database: downloading firebase-database-emulator-v4.7.2.jar... {"metadata":{"emulator":{"name":"database"},"message":"downloading firebase-database-emulator-v4.7.2.jar..."}}
+[debug] [2021-06-07T17:39:58.515Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.7.2.jar 
+[debug] [2021-06-07T17:39:58.727Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.7.2.jar 200
+[debug] [2021-06-07T17:39:58.727Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.7.2.jar [stream]
+[debug] [2021-06-07T17:40:00.680Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-06-07T17:40:00.680Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-06-07T17:40:00.680Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2021-06-07T17:40:00.680Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/NashitaRahman/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/NashitaRahman/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar\",\"--host\",\"localhost\",\"--port\",9000,\"--functions_emulator_host\",\"localhost\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2021-06-07T17:40:01.138Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/NashitaRahman/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+ {"metadata":{"emulator":{"name":"database"},"message":"WARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/NashitaRahman/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys\nWARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\n"}}
+[debug] [2021-06-07T17:40:01.673Z] 12:40:01.672 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"12:40:01.672 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2021-06-07T17:40:01.799Z] 12:40:01.799 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"12:40:01.799 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\n"}}
+[info] i  pubsub: downloading pubsub-emulator-0.1.0.zip... {"metadata":{"emulator":{"name":"pubsub"},"message":"downloading pubsub-emulator-0.1.0.zip..."}}
+[debug] [2021-06-07T17:40:04.233Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.1.0.zip 
+[debug] [2021-06-07T17:40:04.451Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.1.0.zip 200
+[debug] [2021-06-07T17:40:04.451Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.1.0.zip [stream]
+[debug] [2021-06-07T17:40:07.116Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-06-07T17:40:07.118Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-06-07T17:40:07.118Z] Starting Pub/Sub Emulator with command {"binary":"/Users/NashitaRahman/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=localhost","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/Users/NashitaRahman/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=localhost\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2021-06-07T17:40:07.755Z] This is the Google Pub/Sub fake.
+Implementation may be incomplete or differ from the real system.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\nImplementation may be incomplete or differ from the real system.\n"}}
+[debug] [2021-06-07T17:40:07.802Z] Jun 07, 2021 12:40:07 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jun 07, 2021 12:40:07 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2021-06-07T17:40:08.104Z] Jun 07, 2021 12:40:08 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jun 07, 2021 12:40:08 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround\nINFO: Unable to apply Java 7 long hostname workaround.\n"}}
+[debug] [2021-06-07T17:40:08.170Z] Jun 07, 2021 12:40:08 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jun 07, 2021 12:40:08 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: Server started, listening on 8085\n"}}
+[info] i  storage: downloading cloud-storage-rules-runtime-v1.0.0.jar... {"metadata":{"emulator":{"name":"storage"},"message":"downloading cloud-storage-rules-runtime-v1.0.0.jar..."}}
+[debug] [2021-06-07T17:40:08.437Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.0.0.jar 
+[debug] [2021-06-07T17:40:08.486Z] Jun 07, 2021 12:40:08 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jun 07, 2021 12:40:08 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete\nINFO: Adding handler(s) to newly registered Channel.\n"}}
+[debug] [2021-06-07T17:40:08.651Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.0.0.jar 200
+[debug] [2021-06-07T17:40:08.651Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.0.0.jar [stream]
+[debug] [2021-06-07T17:40:10.892Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-06-07T17:40:11.046Z] Temp file directory for storage emulator: /var/folders/nh/hb0ls5cn1l72s92hrmzts37c0000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/nh/hb0ls5cn1l72s92hrmzts37c0000gn/T/firebase/storage/blobs"}}
+[debug] [2021-06-07T17:40:11.633Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/sites 
+[debug] [2021-06-07T17:40:11.862Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/sites 200
+[debug] [2021-06-07T17:40:11.862Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/sites {"sites":[{"name":"projects/670091845133/sites/reactnativefirebase-4486a","defaultUrl":"https://reactnativefirebase-4486a.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2021-06-07T17:40:11.863Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/webApps/-/config [none]
+[debug] [2021-06-07T17:40:12.118Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/webApps/-/config 200
+[debug] [2021-06-07T17:40:12.118Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactnativefirebase-4486a/webApps/-/config {"projectId":"reactnativefirebase-4486a","appId":"1:670091845133:web:52826f06e81f7e3b3eff44","databaseURL":"https://reactnativefirebase-4486a-default-rtdb.firebaseio.com","storageBucket":"reactnativefirebase-4486a.appspot.com","locationId":"us-central","apiKey":"AIzaSyCl033Em0O6mvy0Xaw__5tHJL9Xam0ZJ-s","authDomain":"reactnativefirebase-4486a.firebaseapp.com","messagingSenderId":"670091845133","measurementId":"G-NCPW9L9XT3"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  ui: downloading ui-v1.5.0.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.5.0.zip..."}}
+[debug] [2021-06-07T17:40:12.473Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.5.0.zip 
+[debug] [2021-06-07T17:40:12.691Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.5.0.zip 200
+[debug] [2021-06-07T17:40:12.691Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.5.0.zip [stream]
+[debug] [2021-06-07T17:40:13.647Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-06-07T17:40:13.650Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-06-07T17:40:13.650Z] Starting Emulator UI with command {"binary":"node","args":["/Users/NashitaRahman/.cache/firebase/emulators/ui-v1.5.0/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/NashitaRahman/.cache/firebase/emulators/ui-v1.5.0/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-06-07T17:40:13.747Z] Web / API server started at http://localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
+[info] i  functions: Watching "/Users/NashitaRahman/Desktop/XplorePassAdmin/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions\" for Cloud Functions..."}}
+[debug] [2021-06-07T17:40:13.935Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2021-06-07T17:40:13.935Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2021-06-07T17:40:13.936Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2021-06-07T17:40:13.936Z] [worker-~diagnostic~-aaeb1025-528e-4a01-9026-9a413c774e0b]: Assigning socketPath: /var/folders/nh/hb0ls5cn1l72s92hrmzts37c0000gn/T/fire_emu_39646.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-aaeb1025-528e-4a01-9026-9a413c774e0b]: Assigning socketPath: /var/folders/nh/hb0ls5cn1l72s92hrmzts37c0000gn/T/fire_emu_39646.sock"}}
+[debug] [2021-06-07T17:40:13.936Z] [worker-~diagnostic~-aaeb1025-528e-4a01-9026-9a413c774e0b]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-aaeb1025-528e-4a01-9026-9a413c774e0b]: BUSY"}}
+[debug] [2021-06-07T17:40:14.113Z] [runtime-status] [39646] Functions runtime initialized. {"cwd":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions","node_version":"14.5.0"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Functions runtime initialized. {\"cwd\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions\",\"node_version\":\"14.5.0\"}"}}
+[debug] [2021-06-07T17:40:14.114Z] [runtime-status] [39646] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Disabled runtime features: undefined"}}
+[debug] [2021-06-07T17:40:14.117Z] [runtime-status] [39646] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.9.0","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.9.0\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2021-06-07T17:40:14.118Z] [runtime-status] [39646] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.14.1\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-06-07T17:40:14.121Z] [runtime-status] [39646] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.14.1\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-06-07T17:40:14.121Z] [runtime-status] [39646] Set PUBSUB_EMULATOR_HOST to localhost:8085 {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Set PUBSUB_EMULATOR_HOST to localhost:8085"}}
+[debug] [2021-06-07T17:40:14.122Z] [runtime-status] [39646] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2021-06-07T17:40:14.122Z] [runtime-status] [39646] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.14.1\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-06-07T17:40:14.178Z] [runtime-status] [39646] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Checked functions.config() {\"config\":{}}"}}
+[debug] [2021-06-07T17:40:14.178Z] [runtime-status] [39646] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.14.1","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.14.1\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2021-06-07T17:40:14.178Z] [runtime-status] [39646] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.14.1\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-06-07T17:40:14.179Z] [runtime-status] [39646] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.9.0","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.9.0\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2021-06-07T17:40:14.180Z] [runtime-status] [39646] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.14.1","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.14.1\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-06-07T17:40:14.180Z] [runtime-status] [39646] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.9.0","resolution":"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39646] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"9.9.0\",\"resolution\":\"/Users/NashitaRahman/Desktop/XplorePassAdmin/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2021-06-07T17:40:14.184Z] >>> HTTP REQUEST PUT http://localhost:9000/.settings/rules.json?ns=reactnativefirebase-4486a-default-rtdb  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2021-06-07T17:40:14.190Z] [worker-~diagnostic~-aaeb1025-528e-4a01-9026-9a413c774e0b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-aaeb1025-528e-4a01-9026-9a413c774e0b]: IDLE"}}
+[debug] [2021-06-07T17:40:14.815Z] <<< HTTP RESPONSE 200 {"content-length":"15","content-type":"application/json; charset=utf-8","access-control-allow-origin":"*","cache-control":"no-cache","x-firebase-project-id":"reactnativefirebase-4486a-default-rtdb","x-firebase-project-number":"123456789","x-firebase-uuid":"44112934-7d75-4837-81e4-84252e999294"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ localhost:5001 │ http://localhost:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ localhost:8080 │ http://localhost:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ localhost:9000 │ http://localhost:4000/database  │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ localhost:5000 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ localhost:8085 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ localhost:9199 │ http://localhost:4000/storage   │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:40:44 +0000] "GET / HTTP/1.1" 200 2877 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:40:44 +0000] \"GET / HTTP/1.1\" 200 2877 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:40:44 +0000] "GET /%PUBLIC_URL%/manifest.json HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:40:44 +0000] \"GET /%PUBLIC_URL%/manifest.json HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:40:44 +0000] "GET /%PUBLIC_URL%/favicon.ico HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:40:44 +0000] \"GET /%PUBLIC_URL%/favicon.ico HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:40:52 +0000] "GET / HTTP/1.1" 200 2877 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:40:52 +0000] \"GET / HTTP/1.1\" 200 2877 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:40:52 +0000] "GET /%PUBLIC_URL%/manifest.json HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:40:52 +0000] \"GET /%PUBLIC_URL%/manifest.json HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:40:52 +0000] "GET /%PUBLIC_URL%/favicon.ico HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:40:52 +0000] \"GET /%PUBLIC_URL%/favicon.ico HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
+[debug] [2021-06-07T17:40:56.448Z] Jun 07, 2021 12:40:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jun 07, 2021 12:40:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2021-06-07T17:40:56.646Z] Jun 07, 2021 12:40:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jun 07, 2021 12:40:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:41:07 +0000] "GET /%PUBLIC_URL%/manifest.json HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:41:07 +0000] \"GET /%PUBLIC_URL%/manifest.json HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [07/Jun/2021:17:41:07 +0000] "GET /%PUBLIC_URL%/favicon.ico HTTP/1.1" 500 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [07/Jun/2021:17:41:07 +0000] \"GET /%PUBLIC_URL%/favicon.ico HTTP/1.1\" 500 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\""}}
