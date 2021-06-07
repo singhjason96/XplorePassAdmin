@@ -24,20 +24,20 @@ const Schedule = () => {
     //   email: "bc@123.com",
     // });
 
-    var db = app.firestore();
-    db.collection("purchases")
-      .doc("Purchases")
-      .set({
-        itemsBought: "Horseback Riding",
-        time: "2pm",
-        name: "John Johnson",
-      })
-      .then(() => {
-        console.log("Document successfully written!");
-      })
-      .catch((error) => {
-        console.error("Error writing document: ", error);
-      });
+    // var db = app.firestore();
+    // db.collection("purchases")
+    //   .doc("Purchases")
+    //   .set({
+    //     itemsBought: "Horseback Riding",
+    //     time: "2pm",
+    //     name: "John Johnson",
+    //   })
+    //   .then(() => {
+    //     console.log("Document successfully written!");
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error writing document: ", error);
+    //   });
   }, []);
   const dataProvider = FirebaseDataProvider(config);
 
