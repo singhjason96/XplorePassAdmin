@@ -30,32 +30,32 @@ const UpdatePurchases = () => {
     history.push("/schedule#/purchases");
   }
   return (
-    <>
+    <div>
       <form>
         <TextField
           required
-          label="Items Bought"
+          label='Items Bought'
           onChange={(e) => setItemsBought(e.target.value)}
           value={itemsBought}
-          variant="filled"
+          variant='filled'
         />
         <TextField
           required
-          label="Time"
+          label='Time'
           onChange={(e) => setTime(e.target.value)}
           value={time}
-          variant="filled"
+          variant='filled'
         />
         <TextField
           required
-          label="Name"
+          label='Name'
           onChange={(e) => setName(e.target.value)}
           value={name}
-          variant="filled"
+          variant='filled'
         />
         <Button onClick={writeToCloud}>Submit</Button>
       </form>
-    </>
+    </div>
   );
 };
 
