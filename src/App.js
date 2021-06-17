@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Schedule from "./Components/Schedule";
 import Purchases from "./Components/Purchases";
 import Login from "./Components/Login";
+import ForgotPassword from "./Components/NewPassword";
 import { UserProvider, UserContext } from "./Utils/UserContext";
 import firebase from "./Utils/firebase";
 import {
@@ -29,6 +30,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
+          <Route exact path="/newpwd" component={ForgotPassword} />
           <Route exact path="/schedule" component={Schedule} />
           <Route exact path="/update" component={UpdateSchedule} />
           <Route exact path="/purchases" component={Purchases} />
