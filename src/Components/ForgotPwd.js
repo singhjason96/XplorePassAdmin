@@ -1,12 +1,4 @@
 import React, { useState } from "react";
-import {
-  List,
-  Datagrid,
-  TextField,
-  EmailField,
-  ReferenceField,
-  changeLocaleSuccess,
-} from "react-admin";
 import { makeStyles, StylesProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
@@ -93,7 +85,7 @@ const ForgotPwd = () => {
 
         </div>
         <div>
-          <Link herf="/">Back to sign in page</Link>
+          <Link href="/">Back to sign in page</Link>
         </div>
       </form>
     </div>
