@@ -14,10 +14,13 @@ const UserList = (props) => {
         {/* <ReferenceField source="id" reference="users">
           <TextField source="id" />
         </ReferenceField> */}
-        <TextField source="tourGuide" />
+        {/*       <TextField source="tourGuide" />
         <TextField source="host" />
         <TextField source="event" />
-        <TextField source="hours" />
+      <TextField source="hours" />*/}
+        <TextField source="fullName" />
+        <EmailField source="email" />
+        <TextField source="id" />
       </Datagrid>
     </List>
   );

@@ -18,10 +18,11 @@ const UpdateSchedule = () => {
     firebase.apps && firebase.apps.length > 0
       ? firebase.apps[0]
       : firebase.initializeApp(config);
-
+  // push in data
+  // creates the schedule table already
   function writeToCloud() {
     var db = app.firestore();
-    db.collection("users")
+    db.collection("schedule")
       .doc(`${tourGuide}`)
       .set({
         event: `${event}`,
@@ -29,10 +30,10 @@ const UpdateSchedule = () => {
         hours: `${hours}`,
         tourGuide: `${tourGuide}`,
       });
-    history.push("/schedule#/users");
+    history.push("/schedule#/schedule");
   }
   return (
-    <>
+    <div>
       <form>
         <TextField
           required
@@ -64,7 +65,7 @@ const UpdateSchedule = () => {
         />
         <Button onClick={writeToCloud}>Submit</Button>
       </form>
-    </>
+    </div>
   );
 };
 

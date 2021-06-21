@@ -4,6 +4,12 @@ import config from "../Utils/firebase";
 import firebase from "firebase";
 import UserList from "./UserList";
 import Purchases from "./Purchases";
+import Scheduler from "./Scheduler";
+import {
+  List,
+  Datagrid,
+  TextField,
+} from "react-admin";
 import {
   FirebaseAuthProvider,
   FirebaseDataProvider,
@@ -11,6 +17,7 @@ import {
 
 const Schedule = () => {
   const authProvider = FirebaseAuthProvider(config);
+
   useEffect(() => {
     let app =
       firebase.apps && firebase.apps.length > 0
@@ -39,16 +46,23 @@ const Schedule = () => {
     //     console.error("Error writing document: ", error);
     //   });
   }, []);
-  const dataProvider = FirebaseDataProvider(config);
+  const dataProvider = FirebaseDataProvider(config); // calls all the data
 
   return (
     <>
-      <Admin dataProvider={dataProvider} authProvider={authProvider}>
-        <Resource name="users" list={UserList} />
-        <Resource name="purchases" list={Purchases} />
-      </Admin>
+      <div>
+        <Admin dataProvider={dataProvider} authProvider={authProvider}>
+          <Resource name="users" list={UserList} />
+          <Resource name="purchases" list={Purchases} />
+          <Resource name="schedule" list={Scheduler} />
+        </Admin>
+      </div>
+
     </>
   );
 };
 
 export default Schedule;
+
+
+
