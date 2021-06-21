@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     alignItems: "center",
     borderRadius: "5px",
-    borderColor: "black", 
+    borderColor: "black",
     borderStyle: "solid",
     display: "flex",
     justifyContent: "center",
@@ -82,6 +82,7 @@ const Login = () => {
           required
           id="standard-required"
           label="Password"
+          type="password"
           variant="filled"
           value={password}
           onChange={(e) => setPassword(e.target.value)}

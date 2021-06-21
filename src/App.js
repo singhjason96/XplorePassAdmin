@@ -29,10 +29,10 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
-          <Route exact path="/schedule" component={Schedule} />
-          <Route exact path="/update" component={UpdateSchedule} />
           <Route exact path="/purchases" component={Purchases} />
           <Route exact path="/updatepurchases" component={UpdatePurchases} />
+          <Route exact path="/schedule" component={Schedule} />
+          <Route path="/update" component={UpdateSchedule} />
         </Switch>
       </Router>
     </UserProvider>

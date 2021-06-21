@@ -18,9 +18,13 @@ const UpdateSchedule = () => {
     firebase.apps && firebase.apps.length > 0
       ? firebase.apps[0]
       : firebase.initializeApp(config);
+
   // push in data
-  // creates the schedule table already
   function writeToCloud() {
+    if (tourGuide === "" || event === "" || hours === "" || hours === "") {
+      alert("Please do not leave any fields empty");
+      return;
+    }
     var db = app.firestore();
     db.collection("schedule")
       .doc(`${tourGuide}`)
@@ -32,6 +36,7 @@ const UpdateSchedule = () => {
       });
     history.push("/schedule#/schedule");
   }
+
   return (
     <div>
       <form>
