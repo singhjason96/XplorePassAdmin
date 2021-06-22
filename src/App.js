@@ -36,8 +36,7 @@ const App = () => {
           <Route exact path="/forgotpwd" component={ForgotPassword} />
           <Route exact path="/schedule" component={Schedule} />
           <Route exact path="/update" component={UpdateSchedule} />
-          <Route exact path="/purchases" component={Purchases} />
-          <Route exact path="/updatepurchases" component={UpdatePurchases} />
+
         </Switch>
       </Router>
     </UserProvider>

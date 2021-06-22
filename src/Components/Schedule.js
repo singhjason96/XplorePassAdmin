@@ -5,6 +5,8 @@ import firebase from "firebase";
 import UserList from "./UserList";
 import Purchases from "./Purchases";
 import Scheduler from "./Scheduler";
+import UpdateSchedule from "./UpdateSchedule"
+
 import {
   List,
   Datagrid,
@@ -55,9 +57,9 @@ const Schedule = () => {
           <Resource name="users" list={UserList} />
           <Resource name="purchases" list={Purchases} />
           <Resource name="schedule" list={Scheduler} />
+          {/* <Resource name="update" form={UpdateSchedule} /> */}
         </Admin>
       </div>
-
     </>
   );
 };

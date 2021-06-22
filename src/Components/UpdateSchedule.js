@@ -18,9 +18,13 @@ const UpdateSchedule = () => {
     firebase.apps && firebase.apps.length > 0
       ? firebase.apps[0]
       : firebase.initializeApp(config);
+
   // push in data
-  // creates the schedule table already
   function writeToCloud() {
+    if (tourGuide === "" || event === "" || hours === "" || hours === "") {
+      alert("Please do not leave any fields empty");
+      return;
+    }
     var db = app.firestore();
     db.collection("schedule")
       .doc(`${tourGuide}`)
@@ -32,40 +36,57 @@ const UpdateSchedule = () => {
       });
     history.push("/schedule#/schedule");
   }
+
+  const textStyle = {
+    height: "40px",
+    backgroundColor: "azure",
+    fontSize: 10,
+    fontFamily: "Arial",
+    margin: "20px"
+  };
+
   return (
     <div>
       <form>
         <TextField
           required
           label="Event"
+          style={textStyle}
           onChange={(e) => setEvent(e.target.value)}
           value={event}
           variant="filled"
         />
         <TextField
           required
-          label="Host"
-          onChange={(e) => setHost(e.target.value)}
-          value={host}
+          label="Tour Guide"
+          style={textStyle}
+          onChange={(e) => setTourGuide(e.target.value)}
+          value={tourGuide}
           variant="filled"
         />
+
         <TextField
           required
           label="Hours"
+          style={textStyle}
           onChange={(e) => setHours(e.target.value)}
           value={hours}
           variant="filled"
         />
         <TextField
           required
-          label="Tour Guide"
-          onChange={(e) => setTourGuide(e.target.value)}
-          value={tourGuide}
+          label="Host"
+          style={textStyle}
+          onChange={(e) => setHost(e.target.value)}
+          value={host}
           variant="filled"
         />
-        <Button onClick={writeToCloud}>Submit</Button>
+        <Button
+          onClick={writeToCloud}
+          style={{ margin: 20, backgroundColor: "#add8e6", textAlign: "center", border: 20 }}
+        >Submit</Button>
       </form>
-    </div>
+    </div >
   );
 };
 

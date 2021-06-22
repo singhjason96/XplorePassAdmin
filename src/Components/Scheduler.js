@@ -4,6 +4,7 @@ import config from "../Utils/firebase";
 import firebase from "firebase";
 import UserList from "./UserList";
 import Purchases from "./Purchases";
+import UpdateSchedule from "./UpdateSchedule";
 import {
   List,
   Datagrid,
@@ -12,14 +13,22 @@ import {
 
 const Scheduler = (props) => {
   return (
-    <List {...props}>
-      <Datagrid rowClick="edit">
-        <TextField source="event" />
-        <TextField source="tourGuide" />
-        <TextField source="hours" />
-        <TextField source="host" />
-      </Datagrid>
-    </List>
+    <div>
+      <List {...props}>
+        <Datagrid rowClick="edit">
+          <TextField source="event" />
+          <TextField source="tourGuide" />
+          <TextField source="hours" />
+          <TextField source="host" />
+        </Datagrid>
+      </List>
+
+      <div>
+        <h3>Add more to schedule</h3>
+        <UpdateSchedule />
+      </div>
+    </div>
+
   );
 };
 

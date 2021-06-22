@@ -82,6 +82,7 @@ const Login = () => {
           required
           id="standard-required"
           label="Password"
+          type="password"
           variant="filled"
           type="password"
           value={password}
