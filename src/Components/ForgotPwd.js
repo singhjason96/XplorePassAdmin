@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import TextField from "@material-ui/core/TextField";
 import { makeStyles, StylesProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import firebase from "../Utils/firebase";
-import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "20%",
     marginTop: "0%",
   },
+
   formStyle: {
     marginRight: "auto",
     marginLeft: "auto",
@@ -48,18 +47,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = () => {
+const ForgotPwd = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const classes = useStyles();
 
-  console.log("password", password);
-  let history = useHistory();
-
-  async function login() {
+  function resetPass() {
+    if (email === "") {
+      alert("Please enter an email");
+      return null;
+    }
     try {
-      await firebase.login(email, password);
-      return history.push("/schedule");
+      firebase.resetPassLink(email);
+      alert("Email with reset link has been sent. Go back to sign in page.");
     } catch (e) {
       alert(e);
       return null;
@@ -69,33 +68,28 @@ const Login = () => {
   return (
     <div className={classes.formStyle}>
       <form className={classes.root}>
-        <h2 className={classes.titleStyle}>XplorePass Admin</h2>
-        <TextField
+        <h2 className={classes.titleStyle}>Reset Password</h2>
+        <input
           required
           id="standard-required"
-          label="Email Address"
+          type="email"
+          placeholder="Enter your email"
           variant="filled"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <TextField
-          required
-          id="standard-required"
-          label="Password"
-          variant="filled"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
         <div className={classes.buttonStyle}>
-          <Button variant="contained" color="white" onClick={login}>
-            Log In
+          <Button variant="contained" color="white" onClick={resetPass}>
+            Send Reset Link
           </Button>
-          <Link href="/forgotpwd">Forgot Password?</Link>
+
+        </div>
+        <div>
+          <Link href="/">Back to sign in page</Link>
         </div>
       </form>
     </div>
   );
-};
+}
 
-export default Login;
+export default ForgotPwd;
