@@ -4,7 +4,6 @@ import { makeStyles, StylesProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import firebase from "../Utils/firebase";
-import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,56 +46,70 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "20%",
   },
 }));
+/*
+const reauthenticate = (currentPassword) => {
+  var user = firebase.auth().currentUser;
+  var cred = firebase.auth.EmailAuthProvider.credential(
+    user.email, currentPassword);
+  return user.reauthenticateWithCredential(cred);
+} 
+*/
 
-const Login = () => {
-  const [email, setEmail] = useState("");
+const NewPassword = (currentPassword, newPassword) => {
+  // const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
+  const [newPass, setNewPass] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+
   const classes = useStyles();
-
-  console.log("password", password);
-  let history = useHistory();
-
-  async function login() {
-    try {
-      await firebase.login(email, password);
-      return history.push("/schedule");
-    } catch (e) {
-      alert(e);
-      return null;
+  // let history = useHistory();
+  async function changePass() {
+    if (newPass === confirmPass) {
+      await firebase.changePassword(confirmPass);
     }
+    else {
+      console.log("passwords don't match. please try again");
+    }
+
   }
 
   return (
     <div className={classes.formStyle}>
       <form className={classes.root}>
-        <h2 className={classes.titleStyle}>XplorePass Admin</h2>
         <TextField
           required
           id="standard-required"
-          label="Email Address"
-          variant="filled"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <TextField
-          required
-          id="standard-required"
-          label="Password"
-          type="password"
+          label="Current Password"
           variant="filled"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div className={classes.buttonStyle}>
-          <Button variant="contained" color="white" onClick={login}>
-            Log In
-          </Button>
-          <Link href="/forgotpwd">Forgot Password?</Link>
-        </div>
+        <TextField
+          required
+          id="standard-required"
+          label="New Password"
+          variant="filled"
+          type="password"
+          value={newPass}
+          onChange={(e) => setNewPass(e.target.value)}
+        />
+        <TextField
+          required
+          id="standard-required"
+          label="Confirm Password"
+          variant="filled"
+          type="password"
+          value={confirmPass}
+          onChange={(e) => setConfirmPass(e.target.value)}
+        />
+        <Button variant="contained" color="white" onClick={changePass}>
+          Change Password
+        </Button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default NewPassword;
