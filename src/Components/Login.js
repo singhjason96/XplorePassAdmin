@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginBottom: "20%",
     marginTop: "0%",
+    opacity: 1
   },
   formStyle: {
     marginRight: "auto",
@@ -30,15 +31,17 @@ const useStyles = makeStyles((theme) => ({
     width: "25rem",
     height: "75vh",
     backgroundColor: "white",
+    opacity: 0.9,
     alignItems: "center",
     borderRadius: "5px",
-    borderColor: "black",
+    borderColor: "azure",
     borderStyle: "solid",
     display: "flex",
     justifyContent: "center",
   },
   buttonStyle: {
     display: "flex",
+    backgroundColor: "azure",
     justifyContent: "space-evenly",
     marginRight: "auto",
     marginLeft: "auto",
@@ -73,7 +76,7 @@ const Login = () => {
         <TextField
           required
           id="standard-required"
-          label="Email Address"
+          label="Email address"
           variant="filled"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -84,7 +87,6 @@ const Login = () => {
           label="Password"
           type="password"
           variant="filled"
-          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />

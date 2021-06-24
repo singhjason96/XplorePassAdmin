@@ -30,6 +30,7 @@ class Firebase {
   }
 
   changePassword(pass) {
+    this.auth().currentUser.reauthenticate();
     return this.auth().currentUser.updatePassword(pass);
   }
 

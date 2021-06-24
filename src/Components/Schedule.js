@@ -5,13 +5,7 @@ import firebase from "firebase";
 import UserList from "./UserList";
 import Purchases from "./Purchases";
 import Scheduler from "./Scheduler";
-import UpdateSchedule from "./UpdateSchedule"
 
-import {
-  List,
-  Datagrid,
-  TextField,
-} from "react-admin";
 import {
   FirebaseAuthProvider,
   FirebaseDataProvider,
