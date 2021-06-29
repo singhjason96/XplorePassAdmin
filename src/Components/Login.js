@@ -30,8 +30,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     width: "25rem",
     height: "75vh",
-    backgroundColor: "white",
-    opacity: 0.9,
+    backgroundColor: 'rgba(255,255,255,0.95)',
     alignItems: "center",
     borderRadius: "5px",
     borderColor: "azure",
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonStyle: {
     display: "flex",
-    backgroundColor: "azure",
+    backgroundColor: 'rgba(255,255,255,0.95)',
     justifyContent: "space-evenly",
     marginRight: "auto",
     marginLeft: "auto",
@@ -91,9 +90,11 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <div className={classes.buttonStyle}>
-          <Button variant="contained" color="white" onClick={login}>
+          <Button variant="contained" backgroundColor="white" onClick={login}>
             Log In
           </Button>
+        </div>
+        <div>
           <Link href="/forgotpwd">Forgot Password?</Link>
         </div>
       </form>

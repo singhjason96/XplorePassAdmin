@@ -69,9 +69,9 @@ const NewPassword = (currentPassword, newPassword) => {
       await firebase.changePassword(confirmPass);
     }
     else {
-      console.log("passwords don't match. please try again");
+      alert("passwords don't match. please try again");
+      return null;
     }
-
   }
 
   return (

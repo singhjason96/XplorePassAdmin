@@ -30,9 +30,11 @@ class Firebase {
   }
 
   changePassword(pass) {
-    this.auth().currentUser.reauthenticate();
-    return this.auth().currentUser.updatePassword(pass);
+    this.auth.currentUser.reauthenticate();
+    return this.auth.currentUser.updatePassword(pass);
   }
+
+
 
   getCurrentUsername() {
     return this.auth.currentUser && this.auth.currentUser.displayName;

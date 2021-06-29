@@ -5,6 +5,8 @@ import firebase from "firebase";
 import UserList from "./UserList";
 import Purchases from "./Purchases";
 import Scheduler from "./Scheduler";
+import Link from "@material-ui/core/Link";
+import "./tablestyle.css";
 
 import {
   FirebaseAuthProvider,
@@ -22,37 +24,21 @@ const Schedule = () => {
 
     console.log("app", app);
 
-    // app.database().ref("users/").set({
-    //   username: "Jase",
-    //   email: "bc@123.com",
-    // });
-
-    // var db = app.firestore();
-    // db.collection("purchases")
-    //   .doc("Purchases")
-    //   .set({
-    //     itemsBought: "Horseback Riding",
-    //     time: "2pm",
-    //     name: "John Johnson",
-    //   })
-    //   .then(() => {
-    //     console.log("Document successfully written!");
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error writing document: ", error);
-    //   });
   }, []);
   const dataProvider = FirebaseDataProvider(config); // calls all the data
 
   return (
     <>
+
       <div>
         <Admin dataProvider={dataProvider} authProvider={authProvider}>
           <Resource name="users" list={UserList} />
           <Resource name="purchases" list={Purchases} />
           <Resource name="schedule" list={Scheduler} />
-          {/* <Resource name="update" form={UpdateSchedule} /> */}
         </Admin>
+      </div>
+      <div>
+        <Link href="/newpwd">Change Password</Link>
       </div>
     </>
   );

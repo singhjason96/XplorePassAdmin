@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     width: "25rem",
     height: "75vh",
     backgroundColor: "white",
-    opacity: 0.9,
+    opacity: 0.85,
     alignItems: "center",
     borderRadius: "5px",
     borderColor: "azure",
@@ -76,16 +76,15 @@ const ForgotPwd = () => {
           required
           id="standard-required"
           type="email"
-          placeholder="Enter your email"
+          placeholder="Email address"
           variant="filled"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <div className={classes.buttonStyle}>
-          <Button variant="contained" color="white" onClick={resetPass}>
+          <Button variant="contained" color="azure" onClick={resetPass}>
             Send Reset Link
           </Button>
-
         </div>
         <div>
           <Link href="/">Back to sign in page</Link>
