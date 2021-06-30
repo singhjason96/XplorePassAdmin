@@ -37,9 +37,11 @@ const Schedule = () => {
           <Resource name="schedule" list={Scheduler} />
         </Admin>
       </div>
+      {/*
       <div>
         <Link href="/newpwd">Change Password</Link>
       </div>
+      */}
     </>
   );
 };
