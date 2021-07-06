@@ -21,7 +21,7 @@ const UpdateSchedule = () => {
 
   // push in data
   function writeToCloud() {
-    if (tourGuide === "" || event === "" || hours === "" || hours === "") {
+    if (tourGuide === "" || event === "" || hours === "" || host === "") {
       alert("Please do not leave any fields empty");
       return;
     }
@@ -35,6 +35,8 @@ const UpdateSchedule = () => {
         tourGuide: `${tourGuide}`,
       });
     history.push("/schedule#/schedule");
+    window.location.reload(true);
+    // todo: how to update without having to refresh
   }
 
   const textStyle = {
@@ -64,7 +66,6 @@ const UpdateSchedule = () => {
           value={tourGuide}
           variant="filled"
         />
-
         <TextField
           required
           label="Hours"
@@ -81,10 +82,13 @@ const UpdateSchedule = () => {
           value={host}
           variant="filled"
         />
-        <Button
-          onClick={writeToCloud}
-          style={{ margin: 20, backgroundColor: "#add8e6", textAlign: "center", border: 20 }}
-        >Submit</Button>
+        <div>
+          <Button
+            onClick={writeToCloud}
+            style={{ margin: 20, backgroundColor: "#add8e6", textAlign: "center", border: 20 }}
+          >Submit</Button>
+        </div>
+
       </form>
     </div >
   );

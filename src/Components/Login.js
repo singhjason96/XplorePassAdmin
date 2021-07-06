@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginBottom: "20%",
     marginTop: "0%",
+    opacity: 1
   },
   formStyle: {
     marginRight: "auto",
@@ -29,16 +30,17 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     width: "25rem",
     height: "75vh",
-    backgroundColor: "white",
+    backgroundColor: 'rgba(255,255,255,0.95)',
     alignItems: "center",
     borderRadius: "5px",
-    borderColor: "black",
+    borderColor: "azure",
     borderStyle: "solid",
     display: "flex",
     justifyContent: "center",
   },
   buttonStyle: {
     display: "flex",
+    backgroundColor: 'rgba(255,255,255,0.95)',
     justifyContent: "space-evenly",
     marginRight: "auto",
     marginLeft: "auto",
@@ -73,7 +75,7 @@ const Login = () => {
         <TextField
           required
           id="standard-required"
-          label="Email Address"
+          label="Email address"
           variant="filled"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -84,14 +86,15 @@ const Login = () => {
           label="Password"
           type="password"
           variant="filled"
-          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <div className={classes.buttonStyle}>
-          <Button variant="contained" color="white" onClick={login}>
+          <Button variant="contained" backgroundColor="white" onClick={login}>
             Log In
           </Button>
+        </div>
+        <div>
           <Link href="/forgotpwd">Forgot Password?</Link>
         </div>
       </form>

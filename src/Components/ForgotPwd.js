@@ -3,6 +3,7 @@ import { makeStyles, StylesProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import firebase from "../Utils/firebase";
+import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginBottom: "20%",
     marginTop: "0%",
+    opacity: 1
   },
-
   formStyle: {
     marginRight: "auto",
     marginLeft: "auto",
@@ -29,15 +30,17 @@ const useStyles = makeStyles((theme) => ({
     width: "25rem",
     height: "75vh",
     backgroundColor: "white",
+    opacity: 0.85,
     alignItems: "center",
     borderRadius: "5px",
-    borderColor: "black",
+    borderColor: "azure",
     borderStyle: "solid",
     display: "flex",
     justifyContent: "center",
   },
   buttonStyle: {
     display: "flex",
+    backgroundColor: "azure",
     justifyContent: "space-evenly",
     marginRight: "auto",
     marginLeft: "auto",
@@ -69,20 +72,19 @@ const ForgotPwd = () => {
     <div className={classes.formStyle}>
       <form className={classes.root}>
         <h2 className={classes.titleStyle}>Reset Password</h2>
-        <input
+        <TextField
           required
           id="standard-required"
           type="email"
-          placeholder="Enter your email"
+          placeholder="Email address"
           variant="filled"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <div className={classes.buttonStyle}>
-          <Button variant="contained" color="white" onClick={resetPass}>
+          <Button variant="contained" color="azure" onClick={resetPass}>
             Send Reset Link
           </Button>
-
         </div>
         <div>
           <Link href="/">Back to sign in page</Link>
