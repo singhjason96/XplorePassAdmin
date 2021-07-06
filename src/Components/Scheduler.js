@@ -20,9 +20,9 @@ const Scheduler = (props) => {
           <TextField source="tourGuide" />
           <TextField source="hours" />
           <TextField source="host" />
+          <TextField source="bus" />
         </Datagrid>
       </List>
-
       <div>
         <h3>Add more to schedule</h3>
         <UpdateSchedule />

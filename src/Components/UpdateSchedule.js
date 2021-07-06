@@ -10,8 +10,9 @@ const UpdateSchedule = () => {
   const [event, setEvent] = useState("");
   const [host, setHost] = useState("");
   const [hours, setHours] = useState("");
+  const [bus, setBus] = useState("");
 
-  console.log("all the shit", tourGuide, event, host, hours);
+  console.log("all the shit", tourGuide, event, host, hours, bus);
   let history = useHistory();
 
   let app =
@@ -21,7 +22,7 @@ const UpdateSchedule = () => {
 
   // push in data
   function writeToCloud() {
-    if (tourGuide === "" || event === "" || hours === "" || hours === "") {
+    if (tourGuide === "" || event === "" || hours === "" || hours === "" || bus === "") {
       alert("Please do not leave any fields empty");
       return;
     }
@@ -33,6 +34,7 @@ const UpdateSchedule = () => {
         host: `${host}`,
         hours: `${hours}`,
         tourGuide: `${tourGuide}`,
+        bus: `${bus}`
       });
     history.push("/schedule#/schedule");
   }
@@ -64,7 +66,6 @@ const UpdateSchedule = () => {
           value={tourGuide}
           variant="filled"
         />
-
         <TextField
           required
           label="Hours"
@@ -79,6 +80,14 @@ const UpdateSchedule = () => {
           style={textStyle}
           onChange={(e) => setHost(e.target.value)}
           value={host}
+          variant="filled"
+        />
+        <TextField
+          required
+          label="Buses"
+          style={textStyle}
+          onChange={(e) => setBus(e.target.value)}
+          value={bus}
           variant="filled"
         />
         <Button
